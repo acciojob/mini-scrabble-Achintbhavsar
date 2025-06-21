@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Mini Scrabble</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+  <h2>Mini Scrabble - Letter Counter</h2>
 
+  
+  <input type="text" id="evaluatedText" placeholder="Type your word here..." />
+
+ 
+  <h3 id="letterCount">0</h3>
+
+  <script>
+    const textBox = document.getElementById("evaluatedText");
+    const countDisplay = document.getElementById("letterCount");
+
+    textBox.addEventListener("input", () => {
+      countDisplay.textContent = textBox.value.length;
+    });
+  </script>
 </body>
-
 </html>
